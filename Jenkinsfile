@@ -11,7 +11,7 @@ node{
             catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                     //def encodePAssword = URL.encode("$GIT_PASSWORD", 'UTF-8')
-                    sh "git config user.email clemsbrass@yahoo.fr"
+                    sh "git config user.email 'clemsbrass@yahoo.fr'"
                     sh "git config user.name Clement Afang Ndong"
 
                     //git switch to master
