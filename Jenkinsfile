@@ -8,7 +8,7 @@ node{
 
     stage('Update GIT'){
         script {
-            catchError(buildResult: 'SUCESS', stageResult: 'FAILURE') {
+            catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                 withCredentials([usernamePassword(credentialsId: 'github', passwordVariable: 'GIT_PASSWORD', usernameVaraible: 'GIT_USERNAME')]) {
                     //def encodePAssword = URL.encode("$GIT_PASSWORD", 'UTF-8')
                     sh "git config user.email clemsbrass@yahoo.fr"
